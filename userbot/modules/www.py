@@ -41,22 +41,22 @@ async def get_readable_time(seconds: int) -> str:
     return up_time
 
 
-@register(outgoing=True, pattern=r"^\.ping$")
+@register(outgoing=True, pattern=r"^\$ping$")
 async def pingme(pong):
     """For .ping command, ping the userbot from any chat."""
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    await pong.edit("**✣**")
-    await pong.edit("**✣✣**")
-    await pong.edit("**✣✣✣**")
-    await pong.edit("**✣✣✣✣**")
+    await pong.edit("**☠️**")
+    await pong.edit("**☠️☠️**")
+    await pong.edit("**☠️☠️☠️**")
+    await pong.edit("**☠️☠️☠️☠️**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await pong.edit(
-        f"**PONG!!🏓**\n"
-        f"✣ **Pinger** - `%sms`\n"
-        f"✣ **Uptime -** `{uptime}` \n"
-        f"**✦҈͜͡Owner :** `{ALIVE_NAME}`" % (duration)
+        f"**𝔓𝔬𝔫𝔤!!☯︎**\n"
+        f"☠️ **𝔓𝔦𝔫𝔤𝔢𝔯** - `%sms`\n"
+        f"☠️ **𝔘𝔭𝔱𝔦𝔪𝔢 -** `{uptime}` \n"
+        f"**𝔓𝔢𝔪𝔦𝔩𝔦𝔨 :** `{ALIVE_NAME}`" % (duration)
     )
 
 
@@ -170,30 +170,30 @@ async def speedtst(spd):
     )
 
 
-@register(outgoing=True, pattern=r"^\.pong$")
+@register(outgoing=True, pattern=r"^\$pong$")
 async def pingme(pong):
     """For .ping command, ping the userbot from any chat."""
     start = datetime.now()
-    await pong.edit("`Sepong.....🏓`")
+    await pong.edit("`𝔖𝔢𝔭𝔬𝔫𝔤.....☯︎`")
     end = datetime.now()
     duration = (end - start).microseconds / 9000
-    await pong.edit("🏓 **Ping!**\n`%sms`" % (duration))
+    await pong.edit("☯︎ **Ping!**\n`%sms`" % (duration))
 
 
-@register(outgoing=True, pattern=r"^\.usange(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\$usange(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
     await typew.edit("`Getting Information...`")
     sleep(1)
     await typew.edit(
-        "**Informasi Dyno Usage ★**:\n\n╭━━━━━━━━━━━━━━━━━━━━╮\n"
-        f"-> `Penggunaan Dyno` **{ALIVE_NAME}**:\n"
-        f" ❉ **10 Jam - "
-        f"51 Menit - 0%**"
+        "**ℑ𝔫𝔣𝔬𝔯𝔪𝔞𝔰𝔦 𝔇𝔶𝔫𝔬 𝔘𝔰𝔞𝔤𝔢 ★**:\n\n╭━━━━━━━━━━━━━━━━━━━━╮\n"
+        f"-> `𝔓𝔢𝔫𝔤𝔤𝔲𝔫𝔞𝔞𝔫 𝔇𝔶𝔫𝔬` **{ALIVE_NAME}**:\n"
+        f" ❉ **10 𝔍𝔞𝔪 - "
+        f"51 𝔐𝔢𝔫𝔦𝔱 - 0%**"
         "\n ◐━─━─━─━─━──━─━─━─━─━◐\n"
-        "-> `Sisa Dyno Bulan Ini`:\n"
-        f" ❉ **9989 Jam - 9948 Menit "
+        "-> `𝔖𝔦𝔰𝔞 𝔇𝔶𝔫𝔬 𝔅𝔲𝔩𝔞𝔫 ℑ𝔫𝔦`:\n"
+        f" ❉ **9989 𝔍𝔞𝔪 - 9948 𝔐𝔢𝔫𝔦𝔱 "
         f"- 99%**\n"
         "╰━━━━━━━━━━━━━━━━━━━━╯"
     )
