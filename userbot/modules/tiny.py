@@ -11,13 +11,13 @@ from userbot import CMD_HELP, bot
 from userbot.events import register
 
 
-@register(outgoing=True, pattern=r"^\.tiny(?: |$)(.*)", disable_errors=True)
+@register(outgoing=True, pattern=r"^\.t(?: |$)(.*)", disable_errors=True)
 async def ultiny(event):
     reply = await event.get_reply_message()
     if not (reply and (reply.media)):
         await event.edit("`Balas Ke Pesan Sticker !`")
         return
-    xx = await event.edit("`Processing tiny...`")
+    xx = await event.edit("`Memproses jadi cebol...`")
     ik = await bot.download_media(reply)
     im1 = Image.open("userbot/resources/man_blank.png")
     if ik.endswith(".tgs"):
