@@ -222,7 +222,7 @@ async def pipcheck(pip):
         await pip.edit("**Gunakan** `.help pip` **Untuk Melihat Contoh**")
 
 
-@register(outgoing=True, pattern=r"^\.(?:calive)\s?(.)?")
+@register(outgoing=True, pattern=r"^\.(?:calive)\s?($)?")
 async def amireallyalive(alive):
     user = await bot.get_me()
     uptime = await get_readable_time((time.time() - StartTime))
@@ -265,7 +265,7 @@ async def amireallyalive(alive):
         await alive.delete()
 
 
-@register(outgoing=True, pattern=r"^\.(?:xalive)\s?(.)?")
+@register(outgoing=True, pattern=r"^\.(?:xalive)\s?($)?")
 async def amireallyalive(alive):
     user = await bot.get_me()
     uptime = await get_readable_time((time.time() - StartTime))
@@ -304,7 +304,7 @@ async def amireallyalive(alive):
         await alive.delete()
 
 
-@register(outgoing=True, pattern=r"^\.(?:alive|on)\s?(.)?")
+@register(outgoing=True, pattern=r"^\.(?:alive|on)\s?($)?")
 async def amireallyalive(alive):
     await bot.get_me()
     uptime = await get_readable_time((time.time() - StartTime))
@@ -317,7 +317,7 @@ async def amireallyalive(alive):
         f"{ALIVE_EMOJI} **Python Version :** `{python_version()}` \n"
         f"{ALIVE_EMOJI} **Telethon Version :** `{version.__version__}` \n"
         f"{ALIVE_EMOJI} **Bot Uptime :** `{uptime}` \n\n"
-        "    **[𝗦𝘂𝗽𝗽𝗼𝗿𝘁](https://t.me/sharinguserbot)** | **[𝗖𝗵𝗮𝗻𝗻𝗲𝗹](https://t.me/Lunatic0de)** | **[𝗢𝘄𝗻𝗲𝗿](t.me/mrismanaziz)**"
+        "    **[𝗦𝘂𝗽𝗽𝗼𝗿𝘁](https://t.me/wibuempireindo)** | **[𝗖𝗵𝗮𝗻𝗻𝗲𝗹](https://t.me/Lunatic0de)** | **[𝗢𝘄𝗻𝗲𝗿](t.me/mrismanaziz)**"
     )
     if ALIVE_LOGO:
         try:
@@ -360,7 +360,7 @@ CMD_HELP.update(
 CMD_HELP.update(
     {
         "alive": "**Plugin : **`alive`\
-        \n\n  •  **Syntax :** `.alive` atau `.on`\
+        \n\n  •  **Syntax :** `$alive` atau `$on`\
         \n  •  **Function : **Untuk melihat apakah bot Anda berfungsi atau tidak.\
     "
     }
