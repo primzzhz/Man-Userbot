@@ -157,8 +157,8 @@ async def ParseSauce(googleurl):
 
 CMD_HELP.update(
     {
-        "reverse": "**Plugin : **`reverse`\
-        \n\n  •  **Syntax :** `.reverse` <jumlah>\
+        "reverse": "**Plugin : **`x`\
+        \n\n  •  **Syntax :** `.x` <jumlah>\
         \n  •  **Function : **Balas gambar/stiker untuk melakukan pencarian terbalik di google/\
         \n\n  •  **NOTE :** Hasil Reverse dapat ditentukan, defaultnya adalah 3. Jika penghitung adalah 0, hanya info dan tautan yang akan diberikan. Bot mungkin saja gagal mengunggah gambar jika hasil yang di minta terlalu banyak.\
     "
